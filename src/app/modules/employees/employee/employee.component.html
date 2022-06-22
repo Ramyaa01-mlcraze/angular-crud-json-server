@@ -1,0 +1,50 @@
+<div class="emp-form">
+  <div *ngIf="(showmode=='Register')"> 
+  <form #frmEmployee="ngForm" (ngSubmit)="frmEmployee.form.valid && OnSubmit(frmEmployee)">
+  <div class="row">
+    <div class="col-md-6 form-group">
+      <input type = "text" placeholder="First Name" class="form-control" [(ngModel)]="employeeService.currentEmployee.firstName"
+      name="FirstName" id="Firstname" minlength="3" #Firstname = "ngModel" required>
+      <small class="text-danger" *ngIf="Firstname.invalid && (Firstname.touched || frmEmployee.submitted)">First Name is required and Minimum length should be 3</small>  
+    </div>
+    <div class="col-md-6 form-group">
+      <input type = "text" placeholder="Last Name" class="form-control" [(ngModel)]="employeeService.currentEmployee.lastName"
+      name="LastName" id="Lastname" minlength="1" #Lastname = "ngModel" required>
+      <small class="text-danger" *ngIf="Lastname.invalid && (Lastname.touched || frmEmployee.submitted)"> Last Name is required and Minimum length should be 1</small>  
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 form-group">
+      <input type="text" placeholder="Designation" class="form-control" [(ngModel)]="employeeService.currentEmployee.designation"
+      name="Designation" id="designation" minlength="8" #designation = "ngModel" required>
+      <small class="text-danger" *ngIf="designation.invalid && (designation.touched || frmEmployee.submitted)">Designation is required</small>  
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 form-group">
+      <input type="text" placeholder="Contact" class="form-control" [(ngModel)]="employeeService.currentEmployee.contact"
+      name="Contact" id="contact" maxlength="10" #contact = "ngModel" pattern="[789][0-9]{9}" required>
+      <small class="text-danger" *ngIf="contact.invalid && (contact.touched || frmEmployee.submitted)">Contact is required</small>  
+    </div>
+    <div class="col-md-6 form-group">
+      <input placeholder="Address" class="form-control" [(ngModel)]="employeeService.currentEmployee.address"
+      name="Address" id="address" minlength="3" #address = "ngModel" required>
+      <small class="text-danger" *ngIf="address.invalid && (address.touched || frmEmployee.submitted)">Address is required</small>  
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <button type = "submit" class="btn btn-success btn-lg btn-block" [disabled]="!frmEmployee.valid" (click)="createOrUpdateEmployee(employeeService.currentEmployee)">
+        <i class="fa fa-save"></i>
+        SAVE
+      </button>
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-primary btn-lg btn-block" (click)="clearEmployee()">
+        <i class="fa fa-retweet"></i>
+        CLEAR
+      </button>
+    </div>
+  </div>
+  </form>
+</div>

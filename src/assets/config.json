@@ -1,0 +1,7 @@
+{  
+    "IsFirstname": true,
+    "IsLastname": true,
+    "IsDesignation": true,  
+    "IsContact": true,  
+    "IsAddress": true
+    } 

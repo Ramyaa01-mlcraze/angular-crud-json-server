@@ -1,0 +1,36 @@
+{
+  "Employee": [
+    {
+      "firstName": "Ramyaa",
+      "lastName": "S",
+      "address": "abc",
+      "contact": "1234567890",
+      "id": 1,
+      "designation": "Developer"
+    },
+    {
+      "firstName": "riya",
+      "lastName": "abraham",
+      "address": "fkdhvkchlvkh",
+      "contact": "9500145678",
+      "id": 3,
+      "designation": "Programmer Trainee"
+    },
+    {
+      "firstName": "hari",
+      "lastName": "krishna",
+      "address": "No.4/3,UP",
+      "contact": "9876543210",
+      "id": 4,
+      "designation": "Test Engineer"
+    },
+    {
+      "id": 5,
+      "firstName": "karthik",
+      "lastName": "krishna",
+      "designation": "Executive Manager",
+      "contact": "8545678912",
+      "address": "Hyderabad"
+    }
+  ]
+}
